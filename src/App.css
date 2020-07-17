@@ -1,0 +1,7 @@
+body {
+  color: whitesmoke;
+  background-color: #002612;
+}
+.row div {
+  border: solid 1px;
+}
