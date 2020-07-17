@@ -6,6 +6,7 @@ import Episodes from "./components/Episodes";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
+  const baseUrl = "https://www.breakingbadapi.com/api/";
   return (
     <div className="container">
       <BrowserRouter>
@@ -15,11 +16,11 @@ function App() {
           <Switch>
             <Route
               path="/charachters"
-              render={(props) => <Charachters {...props} />}
+              render={(props) => <Charachters {...props} baseUrl={baseUrl} />}
             />
             <Route
               path="/episodes"
-              render={(props) => <Episodes {...props} />}
+              render={(props) => <Episodes {...props} baseUrl={baseUrl} />}
             />
           </Switch>
         </div>
