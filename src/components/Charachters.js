@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import CharCard from "./CharCard";
 import axios from "axios";
 
 const Charachters = ({ baseUrl }) => {
@@ -17,16 +18,12 @@ const Charachters = ({ baseUrl }) => {
     getCharsFromApi();
   }, []);
   return (
-    <div className="row">
+    <div className="row justify-content-center">
       {loading ? (
         <h2>Loading</h2>
       ) : (
         charachters.map((item) => {
-          return (
-            <div className="col-5 m-2" key={item.char_id}>
-              {item.name}
-            </div>
-          );
+          return <CharCard char={item} />;
         })
       )}
     </div>

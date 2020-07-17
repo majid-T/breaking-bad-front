@@ -12,18 +12,16 @@ function App() {
       <BrowserRouter>
         <Navigation />
 
-        <div className="">
-          <Switch>
-            <Route
-              path="/charachters"
-              render={(props) => <Charachters {...props} baseUrl={baseUrl} />}
-            />
-            <Route
-              path="/episodes"
-              render={(props) => <Episodes {...props} baseUrl={baseUrl} />}
-            />
-          </Switch>
-        </div>
+        <Switch>
+          <Route
+            path="/charachters"
+            render={(props) => <Charachters {...props} baseUrl={baseUrl} />}
+          />
+          <Route
+            path="/episodes"
+            render={(props) => <Episodes {...props} baseUrl={baseUrl} />}
+          />
+        </Switch>
       </BrowserRouter>
     </div>
   );
