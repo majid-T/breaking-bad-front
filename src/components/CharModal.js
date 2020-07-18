@@ -11,7 +11,7 @@ const CharModal = ({ handleClose, show, children }) => {
           className="btn-sm btn-danger mb-0 modal-close-btn"
           onClick={handleClose}
         >
-          x
+          <i className="far fa-window-close"></i>
         </span>
       </section>
     </div>

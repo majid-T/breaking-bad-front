@@ -10,7 +10,6 @@ const Charachters = ({ baseUrl }) => {
     const getCharsFromApi = async () => {
       const chars = await axios(`${baseUrl}characters`);
       if (chars.status === 200) {
-        console.log(chars.data);
         setCharachters(chars.data);
       }
       setLoading(false);
@@ -21,10 +20,10 @@ const Charachters = ({ baseUrl }) => {
   return (
     <div className="row justify-content-center">
       {loading ? (
-        <h2>Loading</h2>
+        <i className="fas fa-sync-alt fa-spin fa-10x mt-100"></i>
       ) : (
         charachters.map((item) => {
-          return <CharCard char={item} />;
+          return <CharCard key={item.char_id} char={item} />;
         })
       )}
     </div>
