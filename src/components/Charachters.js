@@ -10,6 +10,7 @@ const Charachters = ({ baseUrl }) => {
     const getCharsFromApi = async () => {
       const chars = await axios(`${baseUrl}characters`);
       if (chars.status === 200) {
+        console.log(chars.data);
         setCharachters(chars.data);
       }
       setLoading(false);
