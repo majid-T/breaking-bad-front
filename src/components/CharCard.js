@@ -9,7 +9,7 @@ const CharCard = ({ char }) => {
   };
 
   return (
-    <div className="col-3 mb-1" key={char.char_id}>
+    <div className="col-lg-3 mb-1" key={char.char_id}>
       <div className="card">
         <div className="card-inner">
           <div className="card-front">

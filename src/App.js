@@ -9,7 +9,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 function App() {
   const baseUrl = "https://www.breakingbadapi.com/api/";
   return (
-    <div className="container">
+    <div className="container-fluid">
       <BrowserRouter>
         <Navigation />
 
